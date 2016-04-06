@@ -108,6 +108,7 @@ class DDPClient extends EventEmitter{
   // RAW, low level functions
   _send(data) {
     var self = this;
+    console.log(this.socket.readyState);
     self.socket.send(
       EJSON.stringify(data)
     );
